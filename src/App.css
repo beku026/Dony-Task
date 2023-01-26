@@ -1,0 +1,19 @@
+.app {
+  width: 500px;
+  height: 500px;
+  border: 1px solid black;
+  margin: 0 auto;
+  position: relative
+}
+
+
+.img {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img img {
+  border-radius: 50%
+}

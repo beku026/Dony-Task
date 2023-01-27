@@ -24,7 +24,7 @@ export const styleSheet = createUseStyles({
   },
   desk: {
     ...allStyle,
-    width: 30,
+    width: 60,
     height: 30,
   },
   img: {

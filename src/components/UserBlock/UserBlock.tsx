@@ -12,24 +12,20 @@ const UserBlock: FC<IProps> = ({ item }) => {
     left: item.left,
     angle: item.angle,
   })
-
-  const classNames = () => {
-    switch (item.type) {
-      case 'pillar':
-        return classes.block
-      case 'table':
-        return classes.table
-      case 'desk':
-        return classes.desk
-    }
+  const classnames: any = {
+    pillar: classes.block,
+    table: classes.table,
+    desk: classes.desk
   }
 
   return (
-    <div className={classNames()}>
-      <div className="img">
-        {item.user.map((img) => (
-          <img src={img.avatar} alt={img.name} />
-        ))}
+    <div className={classnames[item.type]}>
+      <div className='img'>
+        {
+          item.user?.map(img => (
+            <img src={img.avatar} alt={img.name} key={img.id} />
+          )) 
+        }
       </div>
     </div>
   )
